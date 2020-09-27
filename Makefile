@@ -15,9 +15,9 @@ volumes:
 self-signed-cert:
 	# make a self-signed cert
 
-#secrets/postgres.env:
-#	@echo "Generating postgres password in $@"
-#	@echo "POSTGRES_PASSWORD=$(shell openssl rand -hex 32)" > $@
+secrets/postgres.env:
+	@echo "Generating postgres password in $@"
+	@echo "POSTGRES_PASSWORD=$(shell openssl rand -hex 32)" > $@
 
 userlist:
 	@echo "Add usernames, one per line, to ./userlist, such as:"
@@ -26,7 +26,7 @@ userlist:
 	@exit 1
 
 
-check-files: userlist
+check-files: userlist 
 
 pull:
 	docker pull $(DOCKER_NOTEBOOK_IMAGE)
