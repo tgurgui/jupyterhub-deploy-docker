@@ -1,11 +1,11 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "4aeea331a95d9516b3ecb218a2733ec6a48fad1792beac12a424f7d1664217c8"
+            "sha256": "35631e29a5727bc569cd2b4012995864c24f55bb3d39f62988514ed0d1fcb088"
         },
         "pipfile-spec": 6,
         "requires": {
-            "python_version": "3.8"
+            "python_version": "3.7"
         },
         "sources": [
             {
@@ -147,11 +147,11 @@
         },
         "docker-compose": {
             "hashes": [
-                "sha256:401838bb36e8b1e255fdf22fe6991508193c09d09f57dc923b66d3f2fa663133",
-                "sha256:e97a60ab2f7793641777809c7c8ae1433329ae5f2204b8628b524214729620c7"
+                "sha256:5a5690f24c27d4b43dcbe6b3fae91ba680713208e99ee863352b3bae37bcaa83",
+                "sha256:84ca2edad226435e3a378ea24ca2ca4e1a77cc7c8de057e2812124c6dcb55147"
             ],
             "index": "pypi",
-            "version": "==1.27.3"
+            "version": "==1.27.4"
         },
         "dockerpty": {
             "hashes": [
@@ -172,6 +172,14 @@
             ],
             "markers": "python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3'",
             "version": "==2.10"
+        },
+        "importlib-metadata": {
+            "hashes": [
+                "sha256:77a540690e24b0305878c37ffd421785a6f7e53c8b5720d211b211de8d0e95da",
+                "sha256:cefa1a2f919b866c5beb7c9f7b0ebb4061f30a8a9bf16d609b000e2dfaceb9c3"
+            ],
+            "markers": "python_version < '3.8'",
+            "version": "==2.0.0"
         },
         "jsonschema": {
             "hashes": [
@@ -262,7 +270,7 @@
                 "sha256:30639c035cdb23534cd4aa2dd52c3bf48f06e5f4a941509c8bafd8ce11080259",
                 "sha256:8b74bedcbbbaca38ff6d7491d76f2b06b3592611af620f8426e82dddb04a5ced"
             ],
-            "markers": "python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2'",
+            "markers": "python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3'",
             "version": "==1.15.0"
         },
         "texttable": {
@@ -286,6 +294,14 @@
                 "sha256:d735b91d6d1692a6a181f2a8c9e0238e5f6373356f561bb9dc4c7af36f452010"
             ],
             "version": "==0.57.0"
+        },
+        "zipp": {
+            "hashes": [
+                "sha256:43f4fa8d8bb313e65d8323a3952ef8756bf40f9a5c3ea7334be23ee4ec8278b6",
+                "sha256:b52f22895f4cfce194bc8172f3819ee8de7540aa6d873535a8668b730b8b411f"
+            ],
+            "markers": "python_version >= '3.6'",
+            "version": "==3.2.0"
         }
     },
     "develop": {}
