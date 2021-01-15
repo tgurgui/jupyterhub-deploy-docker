@@ -5,21 +5,21 @@
 version: "2"
 
 services:
-#  hub-db:
-#    image: postgres:9.5
-#    container_name: jupyterhub-db
-#    restart: always
-#    environment:
-#      POSTGRES_DB: ${POSTGRES_DB}
-#      PGDATA: ${DB_VOLUME_CONTAINER}
-#    env_file:
-#      - secrets/postgres.env
-#    volumes:
-#      - "db:${DB_VOLUME_CONTAINER}"
+  hub-db:
+    image: postgres:9.5
+    container_name: jupyterhub-db
+    restart: always
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      PGDATA: ${DB_VOLUME_CONTAINER}
+    env_file:
+      - secrets/postgres.env
+    volumes:
+      - "db:${DB_VOLUME_CONTAINER}"
 
   hub:
-#    depends_on:
-#      - hub-db
+    depends_on:
+      - hub-db
     build:
       context: .
       dockerfile: Dockerfile.jupyterhub
@@ -37,8 +37,8 @@ services:
     ports:
       - "80:80"
       - "443:443"
-#    links:
-#      - hub-db
+    links:
+      - hub-db
     environment:
       # All containers will join this network
       DOCKER_NETWORK_NAME: ${DOCKER_NETWORK_NAME}
@@ -58,9 +58,9 @@ volumes:
   data:
     external:
       name: ${DATA_VOLUME_HOST}
-#  db:
-#    external:
-#      name: ${DB_VOLUME_HOST}
+  db:
+    external:
+      name: ${DB_VOLUME_HOST}
 
 networks:
   default:
